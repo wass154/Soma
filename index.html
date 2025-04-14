@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="Images/LOGO.png" alt="Company Logo" />
+        <h2>SOMA STUDIO</h2>
+      </div>
+
+      <!-- Games List -->
+      <div class="games-section">
+        <h3>Games</h3>
+        <ul class="games-list">
+          <li class="game-item" onclick="selectGame(0)">
+            <img src="Images/GLogo.jpeg" alt="Game 1" />
+            <span>Red Dead Redemption 2</span>
+          </li>
+          <li class="game-item" onclick="selectGame(1)">
+            <img src="Images/anime-car-city.jpg" alt="Game 2" />
+            <span>Drift Hero</span>
+          </li>
+          <li class="game-item" onclick="selectGame(2)">
+            <img src="images/C.jpg" alt="Game 3" />
+            <span>Skyline Racer</span>
+          </li>
+          <li class="game-item" onclick="selectGame(3)">
+            <img src="images/CC.jpg" alt="Game 4" />
+            <span>Shadow Chase</span>
+          </li>
+          <li class="game-item" onclick="selectGame(4)">
+            <img src="images/CCC.jpg" alt="Game 5" />
+            <span>Turbo Drive</span>
+          </li>
+        </ul>
+      </div>
+
+      
+
+      <!-- Navigation Menu -->
+      <ul class="menu">
+  <li><button onclick="showSection('about')">About Me</button></li>
+  <li><button onclick="showSection('projects')">Other Projects</button></li>
+  <li><button onclick="showSection('contact')">Contact</button></li>
+      </ul>
+
+      <!-- Footer -->
+      <footer class="sidebar-footer">
+        <p>&copy; 2025 SOMA STUDIO RELEASE</p>
+      </footer>
+    </div>
+
+    <!-- Right Content -->
+    <div class="content" style="background-image: url('Images/CoverGame.png'); background-size: cover; background-position: center;">
+      <div class="content-wrapper">
+        <!-- Navbar -->
+     <nav class="navbar">
+  <ul>
+    <li><button onclick="showSection('games')">Games</button></li>
+    <li><button onclick="showSection('about')">About Me</button></li>
+    <li><button onclick="showSection('projects')">Other Projects</button></li>
+    <li><button onclick="showSection('contact')">Contact</button></li>
+  </ul>
+</nav>
+
+        <!-- Game Section -->
+        <section id="games" class="content-section active">
+          <div class="game-section">
+            <h1>Red Dead Redemption 2</h1>
+            <img class="game-logo" src="Images/GLogo.jpeg" alt="Game Logo" />
+            
+            <div class="buttons">
+              <button class="modern-btn" onclick="toggleDescription()">Download Game</button>
+              <button class="modern-btn2">Watch Trailer</button>
+            </div>
+      
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/videoID1"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            
+            <div class="description">
+              <div class="FrontSide">
+                <h2>About The Game</h2>
+                <p>
+                  Red Dead Redemption 2 is the most realistic game. It has realistic physics,
+                  great horse control, and transports you to a time when guns were filled with rage.
+                </p>
+              </div>
+              
+              <div class="BackSide">
+                <h2>Download Progress</h2>
+                <div class="progressBar" id="progressBar">
+                  <div class="progressBar-inner"></div>
+                </div>
+              </div>
+            </div>
+                 <!-- Screenshots Section -->
+          <div class="screenshots">
+            <h2>Screenshots</h2>
+            <img class="shot-img" src="images/screenshots.jpeg" alt="Screenshot 1" />
+            <img class="shot-img" src="images/screenshots.jpeg" alt="Screenshot 2" />
+         <!--  <img class="shot-img" src="images/screenshots.jpeg" alt="Screenshot 3" />-->
+         <!--   <img class="shot-img" src="images/screenshots.jpeg" alt="Screenshot 4" />-->
+          </div>
+          </div>
+        </section>
+        <!-- About Section -->
+  <section id="about" class="content-section">
+    <div class="about-section">
+      <h1>About Me</h1>
+      <div class="about-image">
+        <img src="Images/About.png" alt="My Profile Picture">
+      </div>
+      <p> Hi, I’m a passionate developer with a strong love for creating immersive game experiences and visually engaging web designs.
+        I specialize in crafting smooth game physics, realistic car controllers, and dynamic camera systems — all using clean code and custom logic..</p>
+       <!-- Skills List -->
+       <ul class="skills-list">
+        <li>🎮 Game Development (Unity & Unreal)</li>
+        <li>💻 Web Design & Animation</li>
+        <li>⚙️ Custom Physics & Logic Systems</li>
+        <li>🎨 UI/UX with Modern Effects</li>
+      </ul>
+     
+    </div>
+  </section>
+
+ <!-- Projects Section -->
+ <section id="projects" class="content-section">
+  <div class="projects-section">
+    <h1>Other Projects</h1>
+    <p>Explore my other games, interactive websites, and fun experiments.</p>
+
+    <!-- Project 1 -->
+    <div class="project-item">
+      <h2>Racing Mobile Game</h2>
+      <div class="screenshot-gallery">
+        <div class="screenshot-img">
+          <img src="Images/C.jpg" alt="Project 1 Screenshot" />
+        </div>
+      </div>
+      <a href="https://link-to-project1.com" class="project-link">View Project</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-item">
+      <h2>Car Modeling</h2>
+      <div class="screenshot-gallery">
+        <div class="screenshot-img">
+          <img src="Images/CC.jpg" alt="Project 2 Screenshot" />
+        </div>
+      </div>
+      <a href="https://link-to-project2.com" class="project-link">View Project</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-item">
+      <h2>Arts</h2>
+      <div class="screenshot-gallery">
+        <div class="screenshot-img">
+          <img src="Images/C.jpg" alt="Project 3 Screenshot" />
+        </div>
+      </div>
+      <a href="https://link-to-project3.com" class="project-link">View Project</a>
+    </div>
+    
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="content-section">
+    <div class="contact-section">
+      <h1>Get In Touch</h1>
+      <form id="gmailForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+  
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message here" required></textarea>
+  
+        <button type="submit">Send via Gmail</button>
+      </form>
+  
+      <p>Email me at: <a href="mailto:wassimlazez29@gmail.com">wassimlazez29@gmail.com</a></p>
+      <p>Follow me on social: @yourusername</p>
+    </div>
+  </section>
+
+        
+         <!--
+          <div class="progressBar">
+          <h2>Download Stat</h2>
+          <p>wait Is Downloading  !</p>
+          </div>
+           -->
+
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+
+    document.getElementById('gmailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+  
+      const subject = encodeURIComponent("Contact Request from Website");
+      const body = encodeURIComponent(`Name: ${name}\n\nMessage:\n${message}`);
+  
+      const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=wassimlazez29@gmail.com&su=${subject}&body=${body}`;
+  
+      window.open(gmailURL, '_blank');
+    });
+
+    const gameData = [
+      {
+        title: "Red Dead Redemption 2",
+        image: "images/GLogo.png",
+        video: "https://www.youtube.com/embed/videoID1",
+        download: "downloads/red-dead.zip", // <-- NEW
+        description: "Red dead Redmption 2 is the Most Realistic Game have Realistic Physics with good controles of horses bring us to the middle age and guns was charge it with full rage .",
+        background: "Images/CoverGame.png"
+
+      },
+      {
+        title: "Drift Hero",
+        image: "images/anime-car-city.jpg",
+        video: "https://www.youtube.com/embed/videoID2",
+        download: "downloads/red-dead.zip",
+        description: "Master the art of drifting and become the Drift Hero in this high-octane challenge.",
+        background: "Images/anime-car-city.jpg"
+      },
+      {
+        title: "Skyline Racer",
+        image: "images/C.jpg",
+        video: "https://www.youtube.com/embed/videoID3",
+        download: "downloads/red-dead.zip",
+        description: "Race through urban skylines in this neon-lit futuristic racer.",
+        background: "Images/C.jpg"
+      },
+      {
+        title: "Shadow Chase",
+        image: "images/CC.jpg",
+        video: "https://www.youtube.com/embed/videoID4",
+        download: "downloads/red-dead.zip",
+        description: "A stealth-based car chase game through the night streets.",
+        background: "Images/CC.jpg"
+      },
+      {
+        title: "Turbo Drive",
+        image: "images/CCC.jpg",
+        video: "https://www.youtube.com/embed/videoID5",
+        download: "downloads/red-dead.zip",
+        description: "Classic arcade racing with modern visuals and insane speed boosts.",
+        background: "Images/CCC.jpg"
+      },
+    ];
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll(".content-section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+    
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+        activeSection.classList.add("active");
+      }
+    }
+
+    function watchTrailer() {
+      const videoUrl = gameData[selectedGameIndex].video.replace("embed/", "watch?v=");
+      window.open(videoUrl, '_blank');
+    }
+
+    let selectedGameIndex = 0; // default
+    function selectGame(index) {
+// STOP CURRENT DOWNLOAD IF RUNNING
+      // Cancel current download if any
+      if (isDownloading) {
+        clearInterval(progressInterval);
+        isDownloading = false;
+        const progressInner = document.querySelector('.progressBar-inner');
+        progressInner.style.width = '0%';
+    
+        // Reset UI to original state
+        const title = document.querySelector('.description h2');
+        const paragraph = document.querySelector('.description p');
+        const progressText = document.querySelector('.BackSide h2');
+        const progressBarV = document.querySelector('.progressBar');
+    
+        title.style.display = 'block';
+        paragraph.style.display = 'block';
+        progressText.style.display = 'none';
+        progressBarV.style.display = 'none';
+      }
+
+
+
+      selectedGameIndex = index; // Save index
+      const game = gameData[index];
+
+  // Update iframe to play selected game's trailer
+        const iframe = document.querySelector(".video-container iframe");
+        iframe.src = game.video + "?autoplay=1&mute=1"; // Autoplay + mute
+
+      document.querySelector(".game-section h1").innerText = game.title;
+      document.querySelector(".game-section .game-logo").src = game.image;
+      document.querySelector(".video-container iframe").src = game.video;
+      document.querySelector(".description p").innerText = game.description;
+        // Change background image
+  document.querySelector(".content").style.backgroundImage = `url('${game.background}')`;
+
+     // Reset UI
+     document.querySelector('.FrontSide h2').style.display = 'block';
+     document.querySelector('.FrontSide p').style.display = 'block';
+     document.querySelector('.BackSide h2').style.display = 'none';
+     document.querySelector('.progressBar').style.display = 'none';
+     document.querySelector('.progressBar-inner').style.width = '0%';
+     document.querySelector('.BackSide h2').innerText = 'Download Progress';
+    }
+
+    window.onload = () => {
+      // Make sure progress bar is hidden initially
+      document.querySelector('.FrontSide h2').style.display = 'block';
+      document.querySelector('.FrontSide p').style.display = 'block';
+      document.querySelector('.BackSide h2').style.display = 'none';
+      document.querySelector('.progressBar').style.display = 'none';
+    };
+
+    let isDownloading = false;
+    let progressInterval;
+
+    function toggleDescription() {
+        const desc = document.querySelector('.description');
+        const prog = document.querySelector('.progressBar');
+        desc.classList.toggle('flipped');
+
+        const title = document.querySelector('.description h2');
+        const paragraph = document.querySelector('.description p');
+        
+        const isVisible = title.style.display !== 'none';
+      
+        title.style.display = isVisible ? 'none' : 'block';
+        paragraph.style.display = isVisible ? 'none' : 'block';
+        const progressText = document.querySelector('.BackSide h2');
+        const progressBarV=document.querySelector('.progressBar')
+        progressText.style.display = !isVisible ? 'none' : 'block';
+        progressBarV.style.display = !isVisible ? 'none' : 'block';
+
+
+        const progressInner =  document.querySelector('.progressBar-inner');
+
+        
+
+        if (!isVisible) {
+          // Stop the download, reset progress bar, and hide the progress
+          clearInterval(progressInterval);
+          progressInner.style.width = '0%';
+          isDownloading = false;
+         // title.innerText = 'Download Progress';
+      } else {
+          // Start the download, animate progress bar
+          isDownloading = true;
+          let progress = 0;
+       //   title.innerText = 'Downloading...';
+  
+          // Increment progress bar every 100ms
+          progressInterval = setInterval(() => {
+            if (progress >= 100) {
+              clearInterval(progressInterval);
+              isDownloading = false;
+             // title.innerText = 'Download Complete';
+      
+              // Start file download
+              const game = gameData[selectedGameIndex];
+              const downloadLink = document.createElement('a');
+              downloadLink.href = game.download;
+              downloadLink.download = game.title + ".zip";
+              downloadLink.click();
+            } else {
+              progress++;
+              progressInner.style.width = progress + '%';
+            }
+          }, 100);
+        }
+      }
+  
+
+  </script>
+</body>
+</html>
