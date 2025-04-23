@@ -25,8 +25,8 @@
         <h3>Games</h3>
         <ul class="games-list">
           <li class="game-item" onclick="selectGame(0)">
-            <img src="Images/GLogo.jpeg" alt="Game 1" />
-            <span>Red Dead Redemption 2</span>
+            <img src="Images/GLogo.png" alt="Game 1" />
+            <span>RACE GAME PC</span>
           </li>
           <li class="game-item" onclick="selectGame(1)">
             <img src="Images/anime-car-city.jpg" alt="Game 2" />
@@ -76,8 +76,8 @@
         <!-- Game Section -->
         <section id="games" class="content-section active">
           <div class="game-section">
-            <h1>Red Dead Redemption 2</h1>
-            <img class="game-logo" src="Images/GLogo.jpeg" alt="Game Logo" />
+            <h1>RACE GAME PC</h1>
+            <img class="game-logo" src="Images/GLogo.png" alt="Game Logo" />
             
             <div class="buttons">
               <button class="modern-btn" onclick="toggleDescription()">Download Game</button>
@@ -112,8 +112,7 @@
             <!-- Screenshots Section -->
             <div class="screenshots">
               <h2>Screenshots</h2>
-              <img class="shot-img" src="images/screenshots.jpeg" alt="Screenshot 1" />
-              <img class="shot-img" src="images/screenshots.jpeg" alt="Screenshot 2" />
+              <!-- Screenshots will be dynamically inserted here by JavaScript -->
             </div>
           </div>
         </section>
@@ -210,48 +209,77 @@
     });
 
     const gameData = [
-      {
-        title: "Red Dead Redemption 2",
-        image: "images/GLogo.png",
-        video: "Videos/V1.mp4",
-        download: "downloads/red-dead.zip",
-        description: "Red dead Redmption 2 is the Most Realistic Game have Realistic Physics with good controles of horses bring us to the middle age and guns was charge it with full rage .",
-        background: "Images/CoverGame.png"
-      },
-      {
-        title: "Drift Hero",
-        image: "images/anime-car-city.jpg",
-        video: "Videos/V2.mp4",
-        download: "downloads/red-dead.zip",
-        description: "Master the art of drifting and become the Drift Hero in this high-octane challenge.",
-        background: "Images/anime-car-city.jpg"
-      },
-      {
-        title: "Skyline Racer",
-        image: "images/C.jpg",
-        video: "https://www.youtube.com/embed/videoID3",
-        download: "downloads/red-dead.zip",
-        description: "Race through urban skylines in this neon-lit futuristic racer.",
-        background: "Images/C.jpg"
-      },
-      {
-        title: "Shadow Chase",
-        image: "images/CC.jpg",
-        video: "https://www.youtube.com/embed/videoID4",
-        download: "downloads/red-dead.zip",
-        description: "A stealth-based car chase game through the night streets.",
-        background: "Images/CC.jpg"
-      },
-      {
-        title: "Turbo Drive",
-        image: "images/CCC.jpg",
-        video: "https://www.youtube.com/embed/videoID5",
-        download: "downloads/red-dead.zip",
-        description: "Classic arcade racing with modern visuals and insane speed boosts.",
-        background: "Images/CCC.jpg"
-      },
-    ];
-
+    {
+      title: "RACE GAME PC",
+      image: "Images/GLogo.png",
+      video: "Videos/V1.mp4",
+      download: "downloads/red-dead.zip",
+      description: "RACE GAME PC is the Most Realistic Game have Realistic Physics with good controles of horses bring us to the middle age and guns was charge it with full rage .",
+      background: "Images/CoverGame.png",
+      screenshots: [
+        "Images/race_game_pc/race_game_pc_1.png",
+        "Images/race_game_pc/race_game_pc_2.png",
+        "Images/race_game_pc/race_game_pc_1.png",
+        "Images/race_game_pc/race_game_pc_2.png"
+      ]
+    },
+    {
+      title: "Drift Hero",
+      image: "images/anime-car-city.jpg",
+      video: "Videos/V2.mp4",
+      download: "downloads/red-dead.zip",
+      description: "Master the art of drifting and become the Drift Hero in this high-octane challenge.",
+      background: "Images/anime-car-city.jpg",
+      screenshots: [
+        "Images/drift_hero/screenshots0.jpeg",
+        "Images/drift_hero/screenshots1.jpeg",
+        "Images/drift_hero/screenshots2.jpeg",
+        "Images/drift_hero/screenshots3.png"
+      ]
+    },
+    {
+      title: "Skyline Racer",
+      image: "images/C.jpg",
+      video: "https://www.youtube.com/embed/videoID3",
+      download: "downloads/red-dead.zip",
+      description: "Race through urban skylines in this neon-lit futuristic racer.",
+      background: "Images/C.jpg",
+      screenshots: [
+        "images/screenshots/skyline_racer/screenshot1.jpg",
+        "images/screenshots/skyline_racer/screenshot2.jpg",
+        "images/screenshots/skyline_racer/screenshot3.jpg",
+        "images/screenshots/skyline_racer/screenshot4.jpg"
+      ]
+    },
+    {
+      title: "Shadow Chase",
+      image: "images/CC.jpg",
+      video: "https://www.youtube.com/embed/videoID4",
+      download: "downloads/red-dead.zip",
+      description: "A stealth-based car chase game through the night streets.",
+      background: "Images/CC.jpg",
+      screenshots: [
+        "images/screenshots/shadow_chase/screenshot1.jpg",
+        "images/screenshots/shadow_chase/screenshot2.jpg",
+        "images/screenshots/shadow_chase/screenshot3.jpg",
+        "images/screenshots/shadow_chase/screenshot4.jpg"
+      ]
+    },
+    {
+      title: "Turbo Drive",
+      image: "images/CCC.jpg",
+      video: "https://www.youtube.com/embed/videoID5",
+      download: "downloads/red-dead.zip",
+      description: "Classic arcade racing with modern visuals and insane speed boosts.",
+      background: "Images/CCC.jpg",
+      screenshots: [
+        "images/screenshots/turbo_drive/screenshot1.jpg",
+        "images/screenshots/turbo_drive/screenshot2.jpg",
+        "images/screenshots/turbo_drive/screenshot3.jpg",
+        "images/screenshots/turbo_drive/screenshot4.jpg"
+      ]
+    },
+  ];
     function showSection(sectionId) {
       // Hide all sections
       const sections = document.querySelectorAll(".content-section");
@@ -312,6 +340,22 @@
       document.querySelector('.progressBar').style.display = 'none';
       document.querySelector('.progressBar-inner').style.width = '0%';
       document.querySelector('.BackSide h2').innerText = 'Download Progress';
+
+      // Update screenshots
+  const screenshotsContainer = document.querySelector('.screenshots');
+  const screenshotsTitle = screenshotsContainer.querySelector('h2');
+  // Clear existing screenshots
+  screenshotsContainer.innerHTML = '';
+  // Re-append the title
+  screenshotsContainer.appendChild(screenshotsTitle);
+  // Add new screenshots
+  game.screenshots.forEach((screenshot, i) => {
+    const img = document.createElement('img');
+    img.className = 'shot-img';
+    img.src = screenshot;
+    img.alt = `${game.title} Screenshot ${i + 1}`;
+    screenshotsContainer.appendChild(img);
+  });
     }
 
     function toggleDescription() {
