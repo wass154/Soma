@@ -213,7 +213,7 @@
       title: "RACE GAME PC",
       image: "Images/GLogo.png",
       video: "Videos/V1.mp4",
-      download: "downloads/red-dead.zip",
+      download: "https://wass154.itch.io/race-game-pc/download/13483899", // Replace with actual itch.io download URL
       description: "RACE GAME PC is the Most Realistic Game have Realistic Physics with good controles of horses bring us to the middle age and guns was charge it with full rage .",
       background: "Images/CoverGame.png",
       screenshots: [
@@ -385,10 +385,13 @@
             clearInterval(progressInterval);
             isDownloading = false;
             const game = gameData[selectedGameIndex];
-            const downloadLink = document.createElement('a');
-            downloadLink.href = game.download;
-            downloadLink.download = game.title + ".zip";
-            downloadLink.click();
+          // Trigger itch.io download
+          const downloadLink = document.createElement('a');
+          downloadLink.href = game.download;
+          window.location.href = game.download; // Redirects to itch.io game page or direct download
+          downloadLink.download = ''; // Encourage browser to download
+          downloadLink.click();
+          
           } else {
             progress++;
             progressInner.style.width = progress + '%';
